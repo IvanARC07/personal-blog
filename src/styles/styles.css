@@ -1,0 +1,105 @@
+/* Resets
+----------------------------------------------------*/
+:where(*){
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --bg-color: #f0f0f0;
+  --color: #333;
+  --link-hover: #1359dc;
+}
+
+body {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  background-color: var(--bg-color);
+  color: var(--color);
+}
+
+p{
+  text-align: justify;
+}
+
+.heading-1 {
+  font-size: clamp(30px, 10vw, 64px);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.heading-2 {
+  font-size: clamp(24px, 8vw, 54px);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.bold {
+  font-weight: 800;
+}
+
+/* Your code below 
+----------------------------------------------------*/
+
+
+header {
+  min-height: 66px;
+  align-items: center;
+  .logo {
+    text-decoration: none;
+    color: var(--link-hover);
+    white-space: nowrap;
+  }
+  button {
+    grid-column: 4;
+    width: fit-content;
+    justify-self: end;
+    padding: 3px 10px;
+  }
+  nav {
+    ul {
+      li {
+        list-style: none;
+        a{
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+/* Landing page */
+.banner {
+  grid-column: 1 / span 4;
+}
+
+/* Your code above 
+----------------------------------------------------*/
+
+/* Layout Grid and Flex systems
+----------------------------------------------------*/
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin: 0 16px;
+}
+
+/* Breakpoints and Media queries 
+----------------------------------------------------*/
+/* tablets */
+/* desktop */
+
+/* Helpers 
+----------------------------------------------------*/
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}

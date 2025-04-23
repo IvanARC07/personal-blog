@@ -1,18 +1,67 @@
-# Personal Blog Site
+# 📝 Personal Blog Site
 
-## Web development, Dev Journey, and more
+## 📌 Description
+This project showcase a classic web development style. The project will start static for the most part, and increment gradually until it becomes a fully functional web application. Feature enhancements will include: 
 
-A Responsive website where likeminded people will find useful information about web development in general.
+* User authentication
+* SQL based data storage
+* Scalable front-end and back-end implementations
 
-### About the Project
-The purpose of this website is to share the knowledge I’ve gained about web development. I believe many people will find the blog posts useful, as I’ll be documenting my journey—how I landed my first job, what I would do differently if I had to start over, and lessons I’ve learned along the way. I’ll also share interesting blog posts and resources I discover online.
+## 🧠 Design Patterns
 
-This project will continue to grow as it reflects the progress in my career. Here's how I am planning to help others with this blog:
+### 📂 File Architecture
+```bash
+├── src/
+│    ├── assets/          # public access (logo, svgs, etc)
+│    ├── js/              
+│    │  └── utils/        # utilities functions and helpers
+│    ├── pages/
+│    │  └── blogs/
+│    │    └──blogs.js     # blog specific logics
+│    ├── styles/
+│    │  └── styles.css    # for global styles
+│    └── main.js          # main javascript entrypoint
+├── public/               # static files (sitemaps, favicon, etc)
+└── index.html            # main HTML file
+```
+### 🧩 Technologies
+HTML5 semantic tags for layout and inner children (header, main, footer, address, caption, etc).
+  ```html
+  <header></header>
+  <main></main>
+  <footer></footer>
+  ```
+CSS modules for more maintainable styles, and nesting for precision and separation of conserns
+  ```css
+    ul{
+      li{
+        a{
+          color: blue
+        }
+      }
+    }
+  ```
 
-- Creating trustworthy content from trusted sources and personal experiences
-- In the future will add more features, such as level of experience for the reading
-- Easy to understand, so people from different english levels take advantage of the blog
+Javascript modules
+  ```js
+  import {component} from 'component'
+  export const component = () => {...}
+  export default {component}
+  ```
 
-### Built with
-* HTML
-* CSS
+## 🛣️ Roadmap
+
+- [] Static layout using semantic HTML
+- [] Add responsive styles
+- [] Implement SQL
+- [] User authentication and authorization
+- [] Admin panel for content creation
+
+## 💡 Future ideas
+- Dark mode toggle
+- Maybe comment system
+- Markdown support for blogs
+- tag category and filtering
+
+## 🪪 License
+MIT Licensed
